@@ -4,12 +4,19 @@ VIDEOS = [
     title: 'Arithmetic'
     concepts: """
       Resource: <a href="http://repl.it" target="blank">repl.it</a>
-      <br><br>
-      Concepts:
-      <ul>
-        <li>Read Evaluate Print Loop</li>
-        <li>arithmetic</li>
-      </ul>
+      <br>
+      p
+        CoffeeScript supports the four binary arithmetic operations that
+        most of us learn in grade school:
+      ul
+        li | + (addition)
+        li | - (subtraction)
+        li | * (multiplication)
+        li | / (division)
+      p
+        Operations can be combined using parentheses, such as "(3 +7) * 5".
+      p
+        The video lesson shows how to enter expressions using a Read/Evaluate/Print Loop (REPL).
       """
     code: """
       555 + 237
@@ -178,6 +185,8 @@ VIDEOS = [
   }
 ]
 
+convert = require('./pipedent.coffee').convert
+
 embed = (video_id) ->
   """
     (<a href="http://www.youtube.com/watch?v=#{video_id}" target="parent">video</a>)
@@ -188,7 +197,11 @@ sample_code = (example) ->
   "<pre class='code'>#{example}</pre>"
   
 concepts = (concepts) ->
-  "#{concepts}"
+  """
+    <div class='concepts'>
+      #{convert concepts}
+    </div>
+  """
   
 side_by_side = (left, right) ->
   """
