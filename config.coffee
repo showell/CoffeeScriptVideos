@@ -80,10 +80,111 @@ VIDEOS = [
       console.log area(base, height)
       """
   }
+  {
+    id: "wyfQyFod7Vc"
+    concepts: """
+      <h2>Boolean Expressions</h2>
+      """
+    code: """
+      true
+      false
+      x <= 6
+      x < 6
+      x > 6
+      x >= 6
+      """
+  }
+  {
+    id: "mjHiy-2wB4k"
+    concepts: """
+      <h2>While Loops</h2>
+      """
+    code: """
+      i = 1
+      while i <= 10
+        console.log i*i
+        i = i + 1
+      """
+  }
+  {
+    id: "if_0JwIU28E"
+    concepts: """
+      <h2>Multi-line Functions</h2>
+      """
+    code: """
+      square = (n) ->
+        console.log "--- Entering"
+        console.log n
+        return n*n
+      
+      console.log square(5)
+    """
+  }
+  {
+    id: "eZqu42bdjoE"
+    concepts: """
+      <h2>Tetris</h2>
+      """
+    code: """
+      # This screencast is a brief break from writing code, 
+      # where we look at a big real-world program.
+      """
+  }
+  {
+    id: "xv2q5eFQSEk"
+    concepts: """
+      <h2>String Interpolation</h2>
+      """
+    code: '''
+      w = 10
+      l = 8
+      ppsqft = 7.50
+      console.log "Cost is #{ w * l * ppsqft}"
+      '''
+  }
+  {
+    id: "sNNXE_6B3Rw"
+    concepts: """
+      <h2>Arrays and For Loops</h2>
+      """
+    code: '''
+      people = ["alice", "bob", "cal"]
+      for person in people
+        console.log "hi #{person}
+    '''
+  }
+  {
+    id: "vw4MftXsOrM"
+    concepts: """
+      <h2>+= and -=</h2>
+      """
+    code: '''
+      balance = 100
+      balance += 20
+      balance -= 15
+      console.log balance
+      '''
+  }
+  {
+    id: "TlERmDaEjJo"
+    concepts: """
+      <h2>Objects</h2>
+      """
+    code: '''
+      car =
+        color: "metallic blue"
+        year: 2010
+        make: "Jetta"
+        mileage: 14357
+    '''
+  }
 ]
 
 embed = (video_id) ->
-  """<iframe width="420" height="315" src="http://www.youtube.com/embed/#{video_id}?rel=0" frameborder="0" allowfullscreen></iframe>"""
+  """
+    <a href="http://www.youtube.com/watch?v=#{video_id}" target="parent">see video on YouTube</a>
+  """
+  # """<iframe width="420" height="315" src="http://www.youtube.com/embed/#{video_id}?rel=0" frameborder="0" allowfullscreen></iframe>"""
 
 sample_code = (example) ->
   "<pre>#{example}</pre>"
