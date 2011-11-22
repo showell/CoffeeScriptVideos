@@ -1,8 +1,8 @@
 VIDEOS = [
   {
     id: "4qKi_VyYO9s"
+    title: 'Arithmetic'
     concepts: """
-      <h2>Arithmetic</h2>
       <a href="http://repl.it" target="blank">repl.it</a>
       Read Evaluate Print Loop
       arithmetic
@@ -11,12 +11,14 @@ VIDEOS = [
       555 + 237
       20 - 5
       8 * 7
+      14 / 2
+      (3 + 7) * 5
       """
   }
   {
     id: "LgOza6NBqRI"
+    title: 'Variables'
     concepts: """
-      <h2>Variables</h2>
       2-3 line programs
       """
     code: """
@@ -27,8 +29,8 @@ VIDEOS = [
   }
   {
     id: "mOfB0oEZ-xE"
+    title: 'Debugging and Comments'
     concepts: """
-      <h2>Debugging and Comments</h2>
       """
     code: """
       # This program calculates tax.
@@ -40,8 +42,8 @@ VIDEOS = [
   }
   {
     id: "sAJzwvuXDoA"
+    title: 'Functions'
     concepts: """
-      <h2>Functions</h2>
       """
     code: """
       f = (x) -> 2*x + 1
@@ -51,8 +53,8 @@ VIDEOS = [
   }
   {
     id: "3vqowHSKCOQ"
+    title: 'Strings'
     concepts: """
-      <h2>Strings</h2>
       """
     code: """
       greeting = "goodbye"
@@ -62,8 +64,8 @@ VIDEOS = [
   }
   {
     id: "-GeIcQrd7HA"
+    title: 'Basic Review #1'
     concepts: """
-      <h2>Basic Review #1</h2>
       """
     code: """
       # Review of stuff we're done
@@ -82,8 +84,8 @@ VIDEOS = [
   }
   {
     id: "wyfQyFod7Vc"
+    title: 'Boolean Expressions'
     concepts: """
-      <h2>Boolean Expressions</h2>
       """
     code: """
       true
@@ -96,8 +98,8 @@ VIDEOS = [
   }
   {
     id: "mjHiy-2wB4k"
+    title: 'While Loops'
     concepts: """
-      <h2>While Loops</h2>
       """
     code: """
       i = 1
@@ -108,8 +110,8 @@ VIDEOS = [
   }
   {
     id: "if_0JwIU28E"
+    title: 'Multi-line Functions'
     concepts: """
-      <h2>Multi-line Functions</h2>
       """
     code: """
       square = (n) ->
@@ -121,19 +123,9 @@ VIDEOS = [
     """
   }
   {
-    id: "eZqu42bdjoE"
-    concepts: """
-      <h2>Tetris</h2>
-      """
-    code: """
-      # This screencast is a brief break from writing code, 
-      # where we look at a big real-world program.
-      """
-  }
-  {
     id: "xv2q5eFQSEk"
+    title: 'String Interpolation'
     concepts: """
-      <h2>String Interpolation</h2>
       """
     code: '''
       w = 10
@@ -144,8 +136,8 @@ VIDEOS = [
   }
   {
     id: "sNNXE_6B3Rw"
+    title: 'Arrays and Loops'
     concepts: """
-      <h2>Arrays and For Loops</h2>
       """
     code: '''
       people = ["alice", "bob", "cal"]
@@ -155,8 +147,8 @@ VIDEOS = [
   }
   {
     id: "vw4MftXsOrM"
+    title: '+= and -='
     concepts: """
-      <h2>+= and -=</h2>
       """
     code: '''
       balance = 100
@@ -167,8 +159,8 @@ VIDEOS = [
   }
   {
     id: "TlERmDaEjJo"
+    title: 'Objects'
     concepts: """
-      <h2>Objects</h2>
       """
     code: '''
       car =
@@ -182,7 +174,7 @@ VIDEOS = [
 
 embed = (video_id) ->
   """
-    <a href="http://www.youtube.com/watch?v=#{video_id}" target="parent">see video on YouTube</a>
+    (<a href="http://www.youtube.com/watch?v=#{video_id}" target="parent">video</a>)
   """
   # """<iframe width="420" height="315" src="http://www.youtube.com/embed/#{video_id}?rel=0" frameborder="0" allowfullscreen></iframe>"""
 
@@ -205,14 +197,14 @@ table = (headers, rows) ->
     html += "</tr>"
   html += "</table>"
 
-headers = ["Video", "Concepts", "Sample Code"]
+headers = ["Video", "Sample Code", "Concepts"]
 
 rows = []
 for video in VIDEOS
   rows.push [
-    embed video.id
-    concepts video.concepts
+    "<h4>#{video.title}</h4>" + embed(video.id)
     sample_code video.code
+    concepts video.concepts
   ]
   
 console.log table headers, rows
