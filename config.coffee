@@ -3,9 +3,13 @@ VIDEOS = [
     id: "4qKi_VyYO9s"
     title: 'Arithmetic'
     concepts: """
-      <a href="http://repl.it" target="blank">repl.it</a>
-      Read Evaluate Print Loop
-      arithmetic
+      Resource: <a href="http://repl.it" target="blank">repl.it</a>
+      <br><br>
+      Concepts:
+      <ul>
+        <li>Read Evaluate Print Loop</li>
+        <li>arithmetic</li>
+      </ul>
       """
     code: """
       555 + 237
@@ -168,6 +172,8 @@ VIDEOS = [
         year: 2010
         make: "Jetta"
         mileage: 14357
+      
+      console.log car.color
     '''
   }
 ]
@@ -179,32 +185,30 @@ embed = (video_id) ->
   # """<iframe width="420" height="315" src="http://www.youtube.com/embed/#{video_id}?rel=0" frameborder="0" allowfullscreen></iframe>"""
 
 sample_code = (example) ->
-  "<pre>#{example}</pre>"
+  "<pre class='code'>#{example}</pre>"
   
 concepts = (concepts) ->
-  "<pre>#{concepts}</pre>"
+  "#{concepts}"
 
-table = (headers, rows) ->
-  html = "<table border=1 cellpadding=5>"
-  html += "<tr>"
-  for header in headers
-    html += "<th>#{header}</th>"
-  html += "</tr>"
-  for row in rows
-    html += "<tr valign='top'>"
-    for cell in row
-      html += "<td>#{cell}</td>"
-    html += "</tr>"
-  html += "</table>"
+lesson = (video) ->
+  html = ''
+  html += """
+    <h3>#{video.title}</h3>
+    #{embed video.id}
+    <div class='lesson'>
+      #{concepts video.concepts}
+      <br>
+      #{sample_code video.code}
+    </div>
+    <hr>
+    """
+  html
 
-headers = ["Video", "Sample Code", "Concepts"]
+html = ''
+html += "<link rel='stylesheet' href='lessons.css'>"
 
-rows = []
+
 for video in VIDEOS
-  rows.push [
-    "<h4>#{video.title}</h4>" + embed(video.id)
-    sample_code video.code
-    concepts video.concepts
-  ]
-  
-console.log table headers, rows
+  html += lesson video
+
+console.log html

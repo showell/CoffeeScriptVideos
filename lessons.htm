@@ -1,20 +1,64 @@
-<table border=1 cellpadding=5><tr><th>Video</th><th>Sample Code</th><th>Concepts</th></tr><tr valign='top'><td><h4>Arithmetic</h4>(<a href="http://www.youtube.com/watch?v=4qKi_VyYO9s" target="parent">video</a>)</td><td><pre>555 + 237
+<link rel='stylesheet' href='lessons.css'><h3>Arithmetic</h3>
+(<a href="http://www.youtube.com/watch?v=4qKi_VyYO9s" target="parent">video</a>)
+<div class='lesson'>
+  Resource: <a href="http://repl.it" target="blank">repl.it</a>
+<br><br>
+Concepts:
+<ul>
+  <li>Read Evaluate Print Loop</li>
+  <li>arithmetic</li>
+</ul>
+  <br>
+  <pre class='code'>555 + 237
 20 - 5
 8 * 7
 14 / 2
-(3 + 7) * 5</pre></td><td><pre><a href="http://repl.it" target="blank">repl.it</a>
-Read Evaluate Print Loop
-arithmetic</pre></td></tr><tr valign='top'><td><h4>Variables</h4>(<a href="http://www.youtube.com/watch?v=LgOza6NBqRI" target="parent">video</a>)</td><td><pre>year = 1998
+(3 + 7) * 5</pre>
+</div>
+<hr><h3>Variables</h3>
+(<a href="http://www.youtube.com/watch?v=LgOza6NBqRI" target="parent">video</a>)
+<div class='lesson'>
+  2-3 line programs
+  <br>
+  <pre class='code'>year = 1998
 console.log year + 16
-area = (1/2) * b * h</pre></td><td><pre>2-3 line programs</pre></td></tr><tr valign='top'><td><h4>Debugging and Comments</h4>(<a href="http://www.youtube.com/watch?v=mOfB0oEZ-xE" target="parent">video</a>)</td><td><pre># This program calculates tax.
+area = (1/2) * b * h</pre>
+</div>
+<hr><h3>Debugging and Comments</h3>
+(<a href="http://www.youtube.com/watch?v=mOfB0oEZ-xE" target="parent">video</a>)
+<div class='lesson'>
+  
+  <br>
+  <pre class='code'># This program calculates tax.
 amount = 20
 tax_rate = 0.08
 tax = tax_rate * amount
-console.log tax</pre></td><td><pre></pre></td></tr><tr valign='top'><td><h4>Functions</h4>(<a href="http://www.youtube.com/watch?v=sAJzwvuXDoA" target="parent">video</a>)</td><td><pre>f = (x) -> 2*x + 1
+console.log tax</pre>
+</div>
+<hr><h3>Functions</h3>
+(<a href="http://www.youtube.com/watch?v=sAJzwvuXDoA" target="parent">video</a>)
+<div class='lesson'>
+  
+  <br>
+  <pre class='code'>f = (x) -> 2*x + 1
 area = (b, h) -> 1/2 * b * h
-console.log area(2, 1)</pre></td><td><pre></pre></td></tr><tr valign='top'><td><h4>Strings</h4>(<a href="http://www.youtube.com/watch?v=3vqowHSKCOQ" target="parent">video</a>)</td><td><pre>greeting = "goodbye"
+console.log area(2, 1)</pre>
+</div>
+<hr><h3>Strings</h3>
+(<a href="http://www.youtube.com/watch?v=3vqowHSKCOQ" target="parent">video</a>)
+<div class='lesson'>
+  
+  <br>
+  <pre class='code'>greeting = "goodbye"
 person = "fred"
-console.log greeting + ", " + person</pre></td><td><pre></pre></td></tr><tr valign='top'><td><h4>Basic Review #1</h4>(<a href="http://www.youtube.com/watch?v=-GeIcQrd7HA" target="parent">video</a>)</td><td><pre># Review of stuff we're done
+console.log greeting + ", " + person</pre>
+</div>
+<hr><h3>Basic Review #1</h3>
+(<a href="http://www.youtube.com/watch?v=-GeIcQrd7HA" target="parent">video</a>)
+<div class='lesson'>
+  
+  <br>
+  <pre class='code'># Review of stuff we're done
 
 # Functions
 area = (b, h) -> (b * h) / 2
@@ -25,29 +69,82 @@ height = 12
 
 # console.log and strings
 console.log "the area is..."
-console.log area(base, height)</pre></td><td><pre></pre></td></tr><tr valign='top'><td><h4>Boolean Expressions</h4>(<a href="http://www.youtube.com/watch?v=wyfQyFod7Vc" target="parent">video</a>)</td><td><pre>true
+console.log area(base, height)</pre>
+</div>
+<hr><h3>Boolean Expressions</h3>
+(<a href="http://www.youtube.com/watch?v=wyfQyFod7Vc" target="parent">video</a>)
+<div class='lesson'>
+  
+  <br>
+  <pre class='code'>true
 false
 x <= 6
 x < 6
 x > 6
-x >= 6</pre></td><td><pre></pre></td></tr><tr valign='top'><td><h4>While Loops</h4>(<a href="http://www.youtube.com/watch?v=mjHiy-2wB4k" target="parent">video</a>)</td><td><pre>i = 1
+x >= 6</pre>
+</div>
+<hr><h3>While Loops</h3>
+(<a href="http://www.youtube.com/watch?v=mjHiy-2wB4k" target="parent">video</a>)
+<div class='lesson'>
+  
+  <br>
+  <pre class='code'>i = 1
 while i <= 10
   console.log i*i
-  i = i + 1</pre></td><td><pre></pre></td></tr><tr valign='top'><td><h4>Multi-line Functions</h4>(<a href="http://www.youtube.com/watch?v=if_0JwIU28E" target="parent">video</a>)</td><td><pre>square = (n) ->
+  i = i + 1</pre>
+</div>
+<hr><h3>Multi-line Functions</h3>
+(<a href="http://www.youtube.com/watch?v=if_0JwIU28E" target="parent">video</a>)
+<div class='lesson'>
+  
+  <br>
+  <pre class='code'>square = (n) ->
   console.log "--- Entering"
   console.log n
   return n*n
 
-console.log square(5)</pre></td><td><pre></pre></td></tr><tr valign='top'><td><h4>String Interpolation</h4>(<a href="http://www.youtube.com/watch?v=xv2q5eFQSEk" target="parent">video</a>)</td><td><pre>w = 10
+console.log square(5)</pre>
+</div>
+<hr><h3>String Interpolation</h3>
+(<a href="http://www.youtube.com/watch?v=xv2q5eFQSEk" target="parent">video</a>)
+<div class='lesson'>
+  
+  <br>
+  <pre class='code'>w = 10
 l = 8
 ppsqft = 7.50
-console.log "Cost is #{ w * l * ppsqft}"</pre></td><td><pre></pre></td></tr><tr valign='top'><td><h4>Arrays and Loops</h4>(<a href="http://www.youtube.com/watch?v=sNNXE_6B3Rw" target="parent">video</a>)</td><td><pre>people = ["alice", "bob", "cal"]
+console.log "Cost is #{ w * l * ppsqft}"</pre>
+</div>
+<hr><h3>Arrays and Loops</h3>
+(<a href="http://www.youtube.com/watch?v=sNNXE_6B3Rw" target="parent">video</a>)
+<div class='lesson'>
+  
+  <br>
+  <pre class='code'>people = ["alice", "bob", "cal"]
 for person in people
-  console.log "hi #{person}</pre></td><td><pre></pre></td></tr><tr valign='top'><td><h4>+= and -=</h4>(<a href="http://www.youtube.com/watch?v=vw4MftXsOrM" target="parent">video</a>)</td><td><pre>balance = 100
+  console.log "hi #{person}</pre>
+</div>
+<hr><h3>+= and -=</h3>
+(<a href="http://www.youtube.com/watch?v=vw4MftXsOrM" target="parent">video</a>)
+<div class='lesson'>
+  
+  <br>
+  <pre class='code'>balance = 100
 balance += 20
 balance -= 15
-console.log balance</pre></td><td><pre></pre></td></tr><tr valign='top'><td><h4>Objects</h4>(<a href="http://www.youtube.com/watch?v=TlERmDaEjJo" target="parent">video</a>)</td><td><pre>car =
+console.log balance</pre>
+</div>
+<hr><h3>Objects</h3>
+(<a href="http://www.youtube.com/watch?v=TlERmDaEjJo" target="parent">video</a>)
+<div class='lesson'>
+  
+  <br>
+  <pre class='code'>car =
   color: "metallic blue"
   year: 2010
   make: "Jetta"
-  mileage: 14357</pre></td><td><pre></pre></td></tr></table>
+  mileage: 14357
+
+console.log car.color</pre>
+</div>
+<hr>

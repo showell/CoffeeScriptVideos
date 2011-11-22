@@ -1,0 +1,11 @@
+.code {
+  background: #eee;
+  border: 1px black solid;
+  width: 400px;
+  overflow: auto;
+  padding: 15px;
+}
+
+.lesson {
+  padding: 15px;
+}
