@@ -189,6 +189,20 @@ sample_code = (example) ->
   
 concepts = (concepts) ->
   "#{concepts}"
+  
+side_by_side = (left, right) ->
+  """
+  <table class='sideBySide'>
+    <tr valign='top'>
+      <td>
+        #{left}
+      </td>
+      <td>
+        #{right}
+      </td>
+    </tr>
+  </table>
+  """
 
 lesson = (video) ->
   html = ''
@@ -196,9 +210,7 @@ lesson = (video) ->
     <h3>#{video.title}</h3>
     #{embed video.id}
     <div class='lesson'>
-      #{concepts video.concepts}
-      <br>
-      #{sample_code video.code}
+      #{side_by_side sample_code(video.code), concepts(video.concepts)}
     </div>
     <hr>
     """
