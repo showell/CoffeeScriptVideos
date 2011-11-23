@@ -50,6 +50,15 @@ VIDEOS = [
     id: "mOfB0oEZ-xE"
     title: 'Debugging and Comments'
     concepts: """
+      p
+        A comment in CoffeeScript starts with "#", just like in Ruby and Python.
+        Other programming languages uses different syntax, but the concept is the
+        same--you want statements in your program that only the human reads/interprets, 
+        not the computer.
+      
+      p
+        The video gives a basic introduction to debugging.  It just scratches the surface,
+        so this is a lesson where teachers may need to supplement the instruction.
       """
     code: """
       # This program calculates tax.
