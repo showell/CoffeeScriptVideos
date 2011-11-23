@@ -1,9 +1,10 @@
 .code {
-  background: #eee;
+  background: #ddeeee;
   border: 1px black solid;
   width: 400px;
   overflow: auto;
   padding: 15px;
+  font-weight: bold;
 }
 
 .lesson {
@@ -16,4 +17,8 @@
 
 .sideBySide td {
   padding: 15px;
+}
+
+body {
+  padding: 20px;
 }

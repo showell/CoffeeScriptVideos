@@ -30,12 +30,20 @@ VIDEOS = [
     id: "LgOza6NBqRI"
     title: 'Variables'
     concepts: """
-      2-3 line programs
+      p
+        A computer program can be a sequence of statements that execute in order.
+      p
+        CoffeeScript programs can use "console.log" to write values to the console.
+      p
+        Variables such as "year" can be used to hold values, which can be used in
+        subsequent program statements.  You use the "=" operator to assign variables
+        with values.
       """
     code: """
       year = 1998
       console.log year + 16
       area = (1/2) * b * h
+      console.log area
       """
   }
   {
@@ -194,7 +202,10 @@ embed = (video_id) ->
   # """<iframe width="420" height="315" src="http://www.youtube.com/embed/#{video_id}?rel=0" frameborder="0" allowfullscreen></iframe>"""
 
 sample_code = (example) ->
-  "<pre class='code'>#{example}</pre>"
+  """
+    <h5>Example code:</h5>
+    <pre class='code'>#{example}</pre>
+  """
   
 concepts = (concepts) ->
   """
